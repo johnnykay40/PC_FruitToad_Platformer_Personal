@@ -6,6 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float playerSpeed;
     [SerializeField] private float playerJump;
+    [SerializeField] private bool playerBetterJump;
+    [SerializeField] private float playerFallJump;
+    [SerializeField] private float playerLowJump;
 
     Rigidbody2D playerRb;
 
@@ -35,6 +38,19 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey("space") && PlayerCheckGround.isGrounded)
         {
             playerRb.velocity = new Vector2(playerRb.velocity.x, playerJump);
+        }
+
+        if (playerBetterJump)
+        {
+            if (playerRb.velocity.y < 0)
+            {
+                playerRb.velocity += Vector2.up * Physics2D.gravity.y * (playerFallJump) * Time.deltaTime;
+            }
+            
+            if (playerRb.velocity.y > 0 && !Input.GetKey("space"))
+            {
+                playerRb.velocity += Vector2.up * Physics2D.gravity.y * (playerLowJump) * Time.deltaTime;
+            }
         }
     }
 

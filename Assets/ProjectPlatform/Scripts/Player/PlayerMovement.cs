@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody2D playerRb;
 
+    public SpriteRenderer spriteRenderer;
+
 
 
     private void Start()
@@ -24,11 +26,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey("d"))
         {
             playerRb.velocity = new Vector2(playerSpeed, playerRb.velocity.y);
+            spriteRenderer.flipX = false;
         }
         
         else if (Input.GetKey("a"))
         {
             playerRb.velocity = new Vector2(-playerSpeed, playerRb.velocity.y);
+            spriteRenderer.flipX = true;
         }
 
         else

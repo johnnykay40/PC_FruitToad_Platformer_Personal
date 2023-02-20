@@ -5093,6 +5093,7 @@ MonoBehaviour:
   playerFallJump: 0.5
   playerLowJump: 1
   spriteRenderer: {fileID: 1770836089}
+  animator: {fileID: 1770836088}
 --- !u!4 &1977934733 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 663317149931357126, guid: b2b0e8f8b0535b346a672e8c3ef5f0a8, type: 3}

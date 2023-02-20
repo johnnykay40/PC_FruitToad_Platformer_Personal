@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody2D playerRb;
 
+
+
     private void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
@@ -29,6 +31,10 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             playerRb.velocity = new Vector2(0, playerRb.velocity.y);
+        }
+        if (Input.GetKey("space") && PlayerCheckGround.isGrounded)
+        {
+            playerRb.velocity = new Vector2(playerRb.velocity.x, playerJump);
         }
     }
 

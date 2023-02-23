@@ -1,14 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FruitManager : MonoBehaviour
 {
-   public void AllFruitsCollected()    
+
+    private void Update()
     {
-        if (transform.childCount == 1)
+        AllFruitsCollected();
+    }
+
+    public void AllFruitsCollected()    
+    {
+        if (transform.childCount == 0)
         {
             Debug.Log("AllFruitsCollected");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
         

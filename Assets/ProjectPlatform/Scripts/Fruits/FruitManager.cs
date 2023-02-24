@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using TMPro;
 
 public class FruitManager : MonoBehaviour
 {
-    public Text levelCleared;
+    public TextMeshProUGUI levelCleared;
     private void Update()
     {
         AllFruitsCollected();

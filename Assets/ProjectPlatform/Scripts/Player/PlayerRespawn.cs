@@ -25,7 +25,7 @@ public class PlayerRespawn : MonoBehaviour
 
     public void PlayerDamaged()
     {
-        animator.Play("Hit");
+        animator.Play("PlayerHit");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

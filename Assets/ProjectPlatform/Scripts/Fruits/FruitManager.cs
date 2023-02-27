@@ -5,6 +5,8 @@ using TMPro;
 public class FruitManager : MonoBehaviour
 {
     public TextMeshProUGUI levelCleared;
+
+    public GameObject sceneTransition;
     private void Update()
     {
         AllFruitsCollected();
@@ -16,6 +18,7 @@ public class FruitManager : MonoBehaviour
         {
             Debug.Log("AllFruitsCollected");
             levelCleared.gameObject.SetActive(true);
+            sceneTransition.SetActive(true);
             Invoke("ChangeScene", 1); 
         }
     }

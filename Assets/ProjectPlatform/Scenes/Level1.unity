@@ -2079,7 +2079,7 @@ GameObject:
   - component: {fileID: 998898800}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2629,7 +2629,7 @@ GameObject:
   - component: {fileID: 1330916275}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6071,9 +6071,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 1
   playerJump: 3
-  playerBetterJump: 1
   playerFallJump: 0.5
   playerLowJump: 1
+  doubleJumpSpeed: 2
+  playerBetterJump: 1
+  canDoubleJump: 0
   spriteRenderer: {fileID: 1770836089}
   animator: {fileID: 1770836088}
 --- !u!114 &1770836094

@@ -19,7 +19,7 @@ public class FruitManager : MonoBehaviour
             Debug.Log("AllFruitsCollected");
             levelCleared.gameObject.SetActive(true);
             sceneTransition.SetActive(true);
-            Invoke("ChangeScene", 1); 
+            Invoke(nameof(ChangeScene), 1); 
         }
     }
         

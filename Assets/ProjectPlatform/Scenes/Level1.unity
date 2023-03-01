@@ -6499,17 +6499,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerVirtualGuy
       objectReference: {fileID: 0}
+    - target: {fileID: 1473790010558166468, guid: 8961a6ef10b46f44eb538e3b95d9b401, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1473790010558166471, guid: 8961a6ef10b46f44eb538e3b95d9b401, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1473790010558166471, guid: 8961a6ef10b46f44eb538e3b95d9b401, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.4261633
+      value: -0.508
       objectReference: {fileID: 0}
     - target: {fileID: 1473790010558166471, guid: 8961a6ef10b46f44eb538e3b95d9b401, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.22596307
+      value: -0.297
       objectReference: {fileID: 0}
     - target: {fileID: 1473790010558166471, guid: 8961a6ef10b46f44eb538e3b95d9b401, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6552,6 +6556,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 239155154}
     m_Modifications:
+    - target: {fileID: 1581405139698489753, guid: 67f5e7ffaa7f9d64fb3f80f21f300318, type: 3}
+      propertyPath: playerSelected
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2453997623821220294, guid: 67f5e7ffaa7f9d64fb3f80f21f300318, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -6599,10 +6607,6 @@ PrefabInstance:
     - target: {fileID: 2453997623821220299, guid: 67f5e7ffaa7f9d64fb3f80f21f300318, type: 3}
       propertyPath: m_Name
       value: PlayerFrog
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453997623821220299, guid: 67f5e7ffaa7f9d64fb3f80f21f300318, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67f5e7ffaa7f9d64fb3f80f21f300318, type: 3}

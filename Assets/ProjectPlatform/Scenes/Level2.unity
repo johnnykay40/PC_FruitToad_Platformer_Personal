@@ -581,7 +581,7 @@ GameObject:
   - component: {fileID: 232854114}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2615,9 +2615,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 1
   playerJump: 3
-  playerBetterJump: 1
   playerFallJump: 0.5
   playerLowJump: 1
+  doubleJumpSpeed: 2
+  playerBetterJump: 1
+  canDoubleJump: 0
   spriteRenderer: {fileID: 685694895}
   animator: {fileID: 685694894}
 --- !u!50 &685694892
@@ -4433,7 +4435,7 @@ GameObject:
   - component: {fileID: 1484896370}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7773,7 +7775,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0043373704, y: -0.13741103}
+  m_Offset: {x: 0.0016974807, y: -0.13635507}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7784,7 +7786,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09662998, y: 0.010991514}
+  m_Size: {x: 0.10824549, y: 0.008879602}
   m_EdgeRadius: 0
 --- !u!1 &1629663114
 GameObject:

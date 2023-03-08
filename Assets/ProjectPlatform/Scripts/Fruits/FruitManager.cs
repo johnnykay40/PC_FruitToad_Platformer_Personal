@@ -5,11 +5,23 @@ using TMPro;
 public class FruitManager : MonoBehaviour
 {
     public TextMeshProUGUI levelCleared;
+    public TextMeshProUGUI totalFruits;
+    public TextMeshProUGUI fruitsCollected;
+
+    private int totalFruitsInLevel;
 
     public GameObject sceneTransition;
+
+    private void Start()
+    { 
+        totalFruitsInLevel = transform.childCount;
+    }
+
     private void Update()
     {
         AllFruitsCollected();
+        totalFruits.text = totalFruitsInLevel.ToString();
+        fruitsCollected.text = transform.childCount.ToString();
     }
 
     public void AllFruitsCollected()    

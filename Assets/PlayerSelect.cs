@@ -33,15 +33,9 @@ public class PlayerSelect : MonoBehaviour
             case Player.VirtualGuy:
                 spriteRenderer.sprite = playerRenderer[3];
                 animator.runtimeAnimatorController = playerAnimatorControllers[3];
-                break;
-            default:
-                break;
+                break;            
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

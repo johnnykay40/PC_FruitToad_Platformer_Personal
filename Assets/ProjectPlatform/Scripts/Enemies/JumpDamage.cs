@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class JumpDamage : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class JumpDamage : MonoBehaviour
 
     [SerializeField] private float JumpForce;
     [SerializeField] private int lifes;
+    [SerializeField] private AudioSource damageClip;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -19,6 +21,7 @@ public class JumpDamage : MonoBehaviour
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = (Vector2.up * JumpForce);
             LoseLifeNHit();
             CheckLife();
+            damageClip.Play();
         }
     }
 

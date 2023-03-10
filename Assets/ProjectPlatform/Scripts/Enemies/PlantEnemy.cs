@@ -13,5 +13,21 @@ public class PlantEnemy : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform bulletSpawnPosition;
 
+    private void Start()
+    {
+        waitedTime = waitTimeToAttack;
+    }
 
+    private void Update()
+    {
+        if (waitedTime <= 0)
+        {
+            waitedTime = waitTimeToAttack;
+            animator.Play("PlantAttackAnimation");
+        }
+        else
+        {
+            waitedTime -= Time.deltaTime;
+        }
+    }
 }

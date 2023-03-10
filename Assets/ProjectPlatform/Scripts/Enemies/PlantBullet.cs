@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class PlantBullet : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float bulletSpeed;
+    [SerializeField] private float bulletDestroyTime;
+
+    public bool facingLeft;
+
+    private void Start()
     {
-        
+        Destroy(gameObject, bulletDestroyTime);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (facingLeft)
+        {
+            transform.Translate(Vector2.left * bulletSpeed * Time.deltaTime);
+        }
+        else
+        {
+            transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);
+        }
     }
+
 }

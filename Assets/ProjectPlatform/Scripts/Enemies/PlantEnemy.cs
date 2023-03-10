@@ -24,10 +24,18 @@ public class PlantEnemy : MonoBehaviour
         {
             waitedTime = waitTimeToAttack;
             animator.Play("PlantAttackAnimation");
+            Invoke("LaunchBullet", 0.5f);
         }
         else
         {
             waitedTime -= Time.deltaTime;
         }
+    }
+
+    public void LaunchBullet()
+    {
+        GameObject newBullet;
+
+        newBullet = Instantiate(bulletPrefab, bulletSpawnPosition.position, bulletSpawnPosition.rotation);
     }
 }
